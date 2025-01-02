@@ -3,7 +3,9 @@ package com.example.blog.service.article;
 import java.time.LocalDateTime;
 import java.util.Optional;
 import javax.swing.text.html.Option;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ArticleService {
 
   public Optional<ArticleEntity> findById(long id){

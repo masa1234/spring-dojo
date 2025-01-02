@@ -11,7 +11,11 @@ import org.springframework.web.server.ResponseStatusException;
 @RestController
 public class ArticleRestController {
 
-  private final ArticleService articleService = new ArticleService();
+  private final ArticleService articleService;
+
+  public ArticleRestController(ArticleService articleService){
+    this.articleService = articleService;
+  }
   //Get /articles/a
   @GetMapping("/articles/{id}")
   public ArticleDTO showArticle(@PathVariable("id") long id){
